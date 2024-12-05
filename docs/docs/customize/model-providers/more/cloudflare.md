@@ -1,6 +1,6 @@
 # Cloudflare Workers AI
 
-Cloudflare Workers AI can be used for both chat and tab autocompletion in Continue. To setup Cloudflare Workers AI, add the following to your `config.json` file:
+Cloudflare Workers AI can be used for both chat and tab autocompletion in Daemonium-Core. To setup Cloudflare Workers AI, add the following to your `config.json` file:
 
 ```json title="config.json"
 {
@@ -43,4 +43,4 @@ Visit the [Cloudflare dashboard](https://dash.cloudflare.com/) to [create an API
 
 Review [available models](https://developers.cloudflare.com/workers-ai/models/) on Workers AI
 
-[View the source](https://github.com/continuedev/continue/blob/main/core/llm/llms/Cloudflare.ts)
+[View the source](https://github.com/unitylabai/daemonium-core/blob/main/core/llm/llms/Cloudflare.ts)

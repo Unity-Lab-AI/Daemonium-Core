@@ -15,4 +15,4 @@ The SambaNova Cloud is a cloud platform for running large AI models with the wor
 }
 ```
 
-[View the source](https://github.com/continuedev/continue/blob/main/core/llm/llms/SambaNova.ts)
+[View the source](https://github.com/unitylabai/daemonium-core/blob/main/core/llm/llms/SambaNova.ts)

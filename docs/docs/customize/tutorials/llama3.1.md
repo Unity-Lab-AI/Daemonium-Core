@@ -1,12 +1,12 @@
 ---
-title: Using Llama 3.1 with Continue
-description: How to use Llama 3.1 with Continue
+title: Using Llama 3.1 with Daemonium-Core
+description: How to use Llama 3.1 with Daemonium-Core
 keywords: [llama, meta, togetherai, ollama, replicate]
 ---
 
-Continue makes it easy to code with the latest open-source models, including the entire Llama 3.1 family of models. Llama 3.2 models are also supported but not recommended for chat, because they are specifically designed to be small or multi-modal.
+Daemonium-Core makes it easy to code with the latest open-source models, including the entire Llama 3.1 family of models. Llama 3.2 models are also supported but not recommended for chat, because they are specifically designed to be small or multi-modal.
 
-If you haven't already installed Continue, you can do that [here for VS Code](https://marketplace.visualstudio.com/items?itemName=Continue.continue) or [here for JetBrains](https://plugins.jetbrains.com/plugin/22707-continue). For more general information on customizing Continue, read [our customization docs](../overview.md).
+If you haven't already installed Daemonium-Core, you can do that [here for VS Code](https://marketplace.visualstudio.com/items?itemName=Daemonium-Core.daemonium-core) or [here for JetBrains](https://plugins.jetbrains.com/plugin/22707-daemonium-core). For more general information on customizing Daemonium-Core, read [our customization docs](../overview.md).
 
 Below we share some of the easiest ways to get up and running, depending on your use-case.
 
@@ -16,7 +16,7 @@ Ollama is the fastest way to get up and running with local language models. We r
 
 1. Download Ollama [here](https://ollama.ai/) (it should walk you through the rest of these steps)
 2. Open a terminal and run `ollama run llama3.1:8b`
-3. Change your Continue config file like this:
+3. Change your Daemonium-Core config file like this:
 
 ```json title="config.json"
 {
@@ -35,7 +35,7 @@ Ollama is the fastest way to get up and running with local language models. We r
 Groq provides the fastest available inference for open-source language models, including the entire Llama 3.1 family.
 
 1. Obtain an API key [here](https://console.groq.com/keys)
-2. Update your Continue config file like this:
+2. Update your Daemonium-Core config file like this:
 
 ```json title="config.json"
 {
@@ -56,7 +56,7 @@ Together AI provides fast and reliable inference of open-source models. You'll b
 
 1. Create an account [here](https://api.together.xyz/signup)
 2. Copy your API key that appears on the welcome screen
-3. Update your Continue config file like this:
+3. Update your Daemonium-Core config file like this:
 
 ```json title="config.json"
 {
@@ -76,7 +76,7 @@ Together AI provides fast and reliable inference of open-source models. You'll b
 Replicate makes it easy to host and run open-source AI with an API.
 
 1. Get your Replicate API key [here](https://replicate.ai/)
-2. Change your Continue config file like this:
+2. Change your Daemonium-Core config file like this:
 
 ```json title="config.json"
 {
@@ -97,9 +97,9 @@ SambaNova Cloud provides world record Llama3.1 70B/405B serving.
 
 1. Create an account [here](https://cloud.sambanova.ai/)
 2. Copy your API key
-3. Update your Continue config file like this:
+3. Update your Daemonium-Core config file like this:
 
-```json title="~/.continue/config.json"
+```json title="~/.daemonium-core/config.json"
 {
   "models": [
     {
@@ -117,8 +117,8 @@ SambaNova Cloud provides world record Llama3.1 70B/405B serving.
 Cerebras Inference uses specialized silicon to provides fast inference for the Llama3.1 8B/70B.
 
 1. Create an account in the portal [here](https://cloud.cerebras.ai/).
-2. Create and copy the API key for use in Continue.
-3. Update your Continue config file:
+2. Create and copy the API key for use in Daemonium-Core.
+3. Update your Daemonium-Core config file:
 
 ```json title="config.json"
 {

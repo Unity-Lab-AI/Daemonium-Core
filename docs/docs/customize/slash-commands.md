@@ -22,7 +22,7 @@ Generate a shareable markdown transcript of your current chat history.
     {
       "name": "share",
       "description": "Export the current chat session to markdown",
-      "params": { "outputDir": "~/.continue/session-transcripts" }
+      "params": { "outputDir": "~/.daemonium-core/session-transcripts" }
     }
   ]
 }
@@ -62,7 +62,7 @@ Shows the LLM your current git diff and asks it to generate a commit message.
 
 ### `/http`
 
-Write a custom slash command at your own HTTP endpoint. Set 'url' in the params object for the endpoint you have setup. The endpoint should return a sequence of string updates, which will be streamed to the Continue sidebar. See our basic [FastAPI example](https://github.com/continuedev/continue/blob/74002369a5e435735b83278fb965e004ae38a97d/core/context/providers/context_provider_server.py#L34-L45) for reference.
+Write a custom slash command at your own HTTP endpoint. Set 'url' in the params object for the endpoint you have setup. The endpoint should return a sequence of string updates, which will be streamed to the Daemonium-Core sidebar. See our basic [FastAPI example](https://github.com/unitylabai/daemonium-core/blob/74002369a5e435735b83278fb965e004ae38a97d/core/context/providers/context_provider_server.py#L34-L45) for reference.
 
 ```json title="config.json"
 {
@@ -78,7 +78,7 @@ Write a custom slash command at your own HTTP endpoint. Set 'url' in the params 
 
 ### `/issue`
 
-Describe the issue you'd like to generate, and Continue will turn into a well-formatted title and body, then give you a link to the draft so you can submit. Make sure to set the URL of the repository you want to generate issues for.
+Describe the issue you'd like to generate, and Daemonium-Core will turn into a well-formatted title and body, then give you a link to the draft so you can submit. Make sure to set the URL of the repository you want to generate issues for.
 
 ```json title="config.json"
 {
@@ -86,7 +86,7 @@ Describe the issue you'd like to generate, and Continue will turn into a well-fo
     {
       "name": "issue",
       "description": "Generate a link to a drafted GitHub issue",
-      "params": { "repositoryUrl": "https://github.com/continuedev/continue" }
+      "params": { "repositoryUrl": "https://github.com/unitylabai/daemonium-core" }
     }
   ]
 }
@@ -109,7 +109,7 @@ The onboard slash command helps to familiarize yourself with a new project by an
 
 ### Model Context Protocol
 
-The [Model Context Protocol](https://modelcontextprotocol.io/introduction) is a standard proposed by Anthropic to unify prompts, context, and tool use. Continue supports MCP "prompts" by creating slash commands. Read their [quickstart](https://modelcontextprotocol.io/quickstart) to learn how to set up a local server and then configure your `config.json` like this:
+The [Model Context Protocol](https://modelcontextprotocol.io/introduction) is a standard proposed by Anthropic to unify prompts, context, and tool use. Daemonium-Core supports MCP "prompts" by creating slash commands. Read their [quickstart](https://modelcontextprotocol.io/quickstart) to learn how to set up a local server and then configure your `config.json` like this:
 
 ```json
 {

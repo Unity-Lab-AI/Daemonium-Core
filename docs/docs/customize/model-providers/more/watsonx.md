@@ -10,7 +10,7 @@ Accessing watsonx models can be done either through watsonx SaaS on IBM Cloud or
 
 To get started with watsonx SaaS, visit the [registration page](https://dataplatform.cloud.ibm.com/registration/stepone?context=wx). If you do not have an existing IBM Cloud account, you can sign up for a free trial.
 
-To authenticate to watsonx.ai SaaS with Continue, you will need to create a project and [set up an API key](https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=cli-creating-your-cloud-api-key). Then, in continue:
+To authenticate to watsonx.ai SaaS with Daemonium-Core, you will need to create a project and [set up an API key](https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=cli-creating-your-cloud-api-key). Then, in daemonium-core:
 
 - Set **apiBase** to your watsonx SaaS endpoint, e.g. `https://us-south.ml.cloud.ibm.com` for US South region.
 - Set **projectId** to your watsonx project ID.
@@ -18,7 +18,7 @@ To authenticate to watsonx.ai SaaS with Continue, you will need to create a proj
 
 ### watsonx.ai Software
 
-To authenticate to your watsonx.ai Software instance with Continue, you can use either `username/password` or `ZenApiKey` method:
+To authenticate to your watsonx.ai Software instance with Daemonium-Core, you can use either `username/password` or `ZenApiKey` method:
 
 1. _Option 1_ (Recommended): using `ZenApiKey` authentication:
     - Set **apiBase** to your watsonx software endpoint, e.g. `https://cpd-watsonx.apps.example.com`.
@@ -40,7 +40,7 @@ To authenticate to your watsonx.ai Software instance with Continue, you can use 
 
 Add the following configuration to your `config.json` file to use the watsonx provider.
 
-```json title="~/.continue/config.json"
+```json title="~/.daemonium-core/config.json"
 {
   "models": [
     {
@@ -61,7 +61,7 @@ Add the following configuration to your `config.json` file to use the watsonx pr
 
 If you are using a custom deployment endpoint, set `deploymentID` to the model's deployment ID. You can find it in the watsonx.ai Prompt Lab UI by selecting the corresponding model and opening the `</>` tab on the right, which will display the endpoint's URL containing the deployment ID.
 
-```json title="~/.continue/config.json"
+```json title="~/.daemonium-core/config.json"
 {
   "models": [
     {
@@ -82,7 +82,7 @@ If you are using a custom deployment endpoint, set `deploymentID` to the model's
 Make sure to specify a template name, such as `granite` or `llama3`, and to set the `contextLength` to the model's context window size.
 You can also configure generation parameters, such as temperature, topP, topK, frequency penalty, and stop sequences:
 
-```json title="~/.continue/config.json"
+```json title="~/.daemonium-core/config.json"
 {
   "models": [
     {
@@ -114,7 +114,7 @@ You can also configure generation parameters, such as temperature, topP, topK, f
 ## Tab Auto Complete Model
 
 Granite models are recommended for tab auto complete. The configuration is similar to that of the chat models:
-```json title="~/.continue/config.json"
+```json title="~/.daemonium-core/config.json"
 {
     "tabAutocompleteModel": {
       "model": "ibm/granite-8b-code-instruct",
@@ -132,7 +132,7 @@ Granite models are recommended for tab auto complete. The configuration is simil
 ## Embeddings Model
 
 To view the list of available embeddings models, visit [this page](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-models-embed.html?context=wx&pos=2#ibm-provided).
-```json title="~/.continue/config.json
+```json title="~/.daemonium-core/config.json
 {
   "embeddingsProvider": {
     "provider": "watsonx",

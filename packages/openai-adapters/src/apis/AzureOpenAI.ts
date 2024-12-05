@@ -146,7 +146,7 @@ export class AzureOpenAIApi implements BaseLlmApi {
         tokensOutput += event.choices[0]?.delta.content?.length ?? 0;
       } else {
         await new Promise((resolve) => setTimeout(resolve, 5));
-        continue;
+        daemonium-core;
       }
 
       if (tokensOutput < 100 && eventBuffer.length > 30) {

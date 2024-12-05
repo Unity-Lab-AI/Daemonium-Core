@@ -1,5 +1,5 @@
 {
-  "name": "@continuedev/llm-info",
+  "name": "@unitylabai/llm-info",
   "version": "1.0.7",
   "description": "",
   "main": "dist/index.js",

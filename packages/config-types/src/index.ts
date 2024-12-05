@@ -55,7 +55,7 @@ export const modelDescriptionSchema = z.object({
     "sagemaker",
     "cloudflare",
     "azure",
-    "continue-proxy",
+    "daemonium-core-proxy",
     "nebius",
   ]),
   model: z.string(),
@@ -107,7 +107,7 @@ export const embeddingsProviderSchema = z.object({
     "cohere",
     "free-trial",
     "gemini",
-    "continue-proxy",
+    "daemonium-core-proxy",
     "nebius",
   ]),
   apiBase: z.string().optional(),
@@ -171,7 +171,7 @@ export const contextProviderSchema = z.object({
 export type ContextProvider = z.infer<typeof contextProviderSchema>;
 
 export const rerankerSchema = z.object({
-  name: z.enum(["cohere", "voyage", "llm", "continue-proxy"]),
+  name: z.enum(["cohere", "voyage", "llm", "daemonium-core-proxy"]),
   params: z.record(z.any()).optional(),
 });
 export type Reranker = z.infer<typeof rerankerSchema>;
@@ -185,7 +185,7 @@ export const analyticsSchema = z.object({
     "mixpanel",
     "splunk",
     "datadog",
-    "continue-proxy",
+    "daemonium-core-proxy",
   ]),
   url: z.string().optional(),
   clientKey: z.string().optional(),
@@ -206,7 +206,7 @@ export const siteIndexingConfigSchema = z.object({
 });
 
 export const controlPlaneConfigSchema = z.object({
-  useContinueForTeamsProxy: z.boolean().optional(),
+  useDaemonium-CoreForTeamsProxy: z.boolean().optional(),
   proxyUrl: z.string().optional(),
 });
 

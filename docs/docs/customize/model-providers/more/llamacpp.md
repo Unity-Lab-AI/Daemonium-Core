@@ -6,7 +6,7 @@ Run the llama.cpp server binary to start the API server. If running on a remote 
 .\server.exe -c 4096 --host 0.0.0.0 -t 16 --mlock -m models\meta\llama\codellama-7b-instruct.Q8_0.gguf
 ```
 
-After it's up and running, change `~/.continue/config.json` to look like this:
+After it's up and running, change `~/.daemonium-core/config.json` to look like this:
 
 ```json title="config.json"
 {
@@ -21,4 +21,4 @@ After it's up and running, change `~/.continue/config.json` to look like this:
 }
 ```
 
-[View the source](https://github.com/continuedev/continue/blob/main/core/llm/llms/LlamaCpp.ts)
+[View the source](https://github.com/unitylabai/daemonium-core/blob/main/core/llm/llms/LlamaCpp.ts)

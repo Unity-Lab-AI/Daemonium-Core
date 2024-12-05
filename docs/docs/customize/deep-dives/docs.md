@@ -1,12 +1,12 @@
 ---
-description: Learn how to access and search your project's documentation directly within Continue
+description: Learn how to access and search your project's documentation directly within Daemonium-Core
 keywords: [documentation, indexing, context provider, embeddings, docs]
 toc_max_heading_level: 5
 ---
 
 # @Docs
 
-The [`@Docs` context provider](customize/context-providers.md#docs) allows you to interact with your documentation directly within Continue. This feature enables you to index any static site or GitHub markdown pages, making it easier to access and utilize your documentation while coding.
+The [`@Docs` context provider](customize/context-providers.md#docs) allows you to interact with your documentation directly within Daemonium-Core. This feature enables you to index any static site or GitHub markdown pages, making it easier to access and utilize your documentation while coding.
 
 ## Enabling the `@Docs` context provider
 
@@ -33,7 +33,7 @@ The `@Docs` context provider works by crawling specified documentation sites, ge
 
 ## Pre-indexed Documentation Sites
 
-We offer a selection of pre-indexed documentation sites for popular frameworks and libraries. You can view the list of [available pre-indexed sites and request additions here](https://github.com/continuedev/continue/blob/main/core/indexing/docs/preIndexedDocs.ts).
+We offer a selection of pre-indexed documentation sites for popular frameworks and libraries. You can view the list of [available pre-indexed sites and request additions here](https://github.com/unitylabai/daemonium-core/blob/main/core/indexing/docs/preIndexedDocs.ts).
 
 ## Indexing Your Own Documentation
 
@@ -51,15 +51,15 @@ Indexing will begin upon submission.
 
 To add multiple documentation sites, we recommend adding them in bulk to your `config.json` file. Indexing will kick off upon file save.
 
-The [configuration schema for docs](https://github.com/continuedev/continue/blob/v0.9.212-vscode/extensions/vscode/config_schema.json#L1943-L1973) is as follows:
+The [configuration schema for docs](https://github.com/unitylabai/daemonium-core/blob/v0.9.212-vscode/extensions/vscode/config_schema.json#L1943-L1973) is as follows:
 
 ```json
 "docs": [
     {
-    "title": "Continue",
-    "startUrl": "https://docs.continue.dev/intro",
-    "rootUrl": "https://docs.continue.dev",
-    "faviconUrl": "https://docs.continue.dev/favicon.ico",
+    "title": "Daemonium-Core",
+    "startUrl": "https://docs.unitylabai.com/intro",
+    "rootUrl": "https://docs.unitylabai.com",
+    "faviconUrl": "https://docs.unitylabai.com/favicon.ico",
   }
 ]
 ```
@@ -71,7 +71,7 @@ The [configuration schema for docs](https://github.com/continuedev/continue/blob
 
 ## Configuration
 
-As with [@Codebase context provider configuration](https://docs.continue.dev/customize/deep-dives/codebase#configuration), you can adjust the behavior of the docs context provider with the `nRetrieve`, `nFinal`, and `useReranking`
+As with [@Codebase context provider configuration](https://docs.unitylabai.com/customize/deep-dives/codebase#configuration), you can adjust the behavior of the docs context provider with the `nRetrieve`, `nFinal`, and `useReranking`
 
 ```json title="config.json"
 {
@@ -92,7 +92,7 @@ As with [@Codebase context provider configuration](https://docs.continue.dev/cus
 
 By default, we use a lighter weight tool to crawl documentation sites that cannot render sites that are dynamically generated using JavaScript.
 
-If you want to crawl a site that is dynamically generated, or you get an error while attempting to crawl a site, you can enable the experimental `useChromiumForDocsCrawling` feature in your `config.json`. This will download and install Chromium to `~/.continue/.utils`.
+If you want to crawl a site that is dynamically generated, or you get an error while attempting to crawl a site, you can enable the experimental `useChromiumForDocsCrawling` feature in your `config.json`. This will download and install Chromium to `~/.daemonium-core/.utils`.
 
 ```json title="config.json"
 "experimental": {
@@ -104,4 +104,4 @@ If you want to crawl a site that is dynamically generated, or you get an error w
 
 ### How often is the indexed content updated?
 
-Currently we do not automatically re-index your docs. If you would like to force a re-index, you can use the following command: `Continue: Docs Force Re-Index`.
+Currently we do not automatically re-index your docs. If you would like to force a re-index, you can use the following command: `Daemonium-Core: Docs Force Re-Index`.

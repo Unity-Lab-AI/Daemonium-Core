@@ -4,13 +4,13 @@ description: How to set up Codestral
 keywords: [codestral, mistral, model setup]
 ---
 
-![mistral x continue](../../../static/img/mistral-x-continue.png)
+![mistral x daemonium-core](../../../static/img/mistral-x-daemonium-core.png)
 
-**Here is a step-by-step guide on how to set up Codestral with Continue using the Mistral AI API:**
+**Here is a step-by-step guide on how to set up Codestral with Daemonium-Core using the Mistral AI API:**
 
-1. Install the Continue VS Code or JetBrains extension following the instructions [here](../../getting-started/install.md)
+1. Install the Daemonium-Core VS Code or JetBrains extension following the instructions [here](../../getting-started/install.md)
 
-2. Click on the gear icon in the bottom right corner of the Continue window to open `~/.continue/config.json` (MacOS) / `%userprofile%\.continue\config.json` (Windows)
+2. Click on the gear icon in the bottom right corner of the Daemonium-Core window to open `~/.daemonium-core/config.json` (MacOS) / `%userprofile%\.daemonium-core\config.json` (Windows)
 
 3. Log in and create an API key on Mistral AI's La Plateforme [here](https://console.mistral.ai/codestral). Make sure you get an API key from the "Codestral" page, as an API key for the normal "api.mistral.ai" API will not work.
 

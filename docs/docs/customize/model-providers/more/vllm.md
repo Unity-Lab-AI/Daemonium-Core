@@ -6,7 +6,7 @@ Run the OpenAI-compatible server by vLLM using `vllm serve`. See their [server d
 vllm serve NousResearch/Meta-Llama-3-8B-Instruct --max-model-len 1024
 ```
 
-The continue implementation uses [OpenAI](../top-level/openai.md) under the hood and automatically selects the available model. You only need to set the `apiBase` like this:
+The daemonium-core implementation uses [OpenAI](../top-level/openai.md) under the hood and automatically selects the available model. You only need to set the `apiBase` like this:
 
 ```json title="config.json"
 {
@@ -19,4 +19,4 @@ The continue implementation uses [OpenAI](../top-level/openai.md) under the hood
 }
 ```
 
-[View the source](https://github.com/continuedev/continue/blob/main/core/llm/llms/Vllm.ts)
+[View the source](https://github.com/unitylabai/daemonium-core/blob/main/core/llm/llms/Vllm.ts)

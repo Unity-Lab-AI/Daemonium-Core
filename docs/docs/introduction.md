@@ -4,7 +4,7 @@ description: The open-source AI code assistant for developers
 slug: /
 keywords:
   [
-    continue,
+    daemonium-core,
     AI,
     code assistant,
     autocomplete,
@@ -15,9 +15,9 @@ keywords:
   ]
 ---
 
-![Continue Logo](../static/img/intro.png)
+![Daemonium-Core Logo](../static/img/intro.png)
 
-**Continue is the leading open-source AI code assistant inside of [VS Code](https://marketplace.visualstudio.com/items?itemName=Continue.continue) and [JetBrains](https://plugins.jetbrains.com/plugin/22707-continue-extension)**
+**Daemonium-Core is the leading open-source AI code assistant inside of [VS Code](https://marketplace.visualstudio.com/items?itemName=Daemonium-Core.daemonium-core) and [JetBrains](https://plugins.jetbrains.com/plugin/22707-daemonium-core-extension)**
 
 - [Chat](chat/how-to-use-it.md) to understand and iterate on code in the sidebar
 - [Autocomplete](autocomplete/how-to-use-it.md) to receive inline code suggestions as you type

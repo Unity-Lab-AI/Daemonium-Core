@@ -5,7 +5,7 @@ title: Build your own slash command
 There are two ways to add custom slash commands:
 
 1. With natural language prompts - this is simpler and only requires writing a string or string template.
-2. With a custom function - this gives you full access to the Continue SDK and allows you to write arbitrary Typescript code.
+2. With a custom function - this gives you full access to the Daemonium-Core SDK and allows you to write arbitrary Typescript code.
 
 ### "Custom Commands" (Use Natural Language)
 
@@ -36,9 +36,9 @@ The `prompt` property supports templating with Handlebars syntax. You can use th
 
 If you want to go a step further than writing custom commands with natural language, you can write a custom function that returns the response. This requires using `config.ts` instead of `config.json`.
 
-To do this, push a new `SlashCommand` object to the `slashCommands` list. This object contains "name", the name that you will type to invoke the slash command, "description", the description seen in the dropdown menu, and "run". The `run` function is any async generator that should yield strings as you want them to be streamed to the UI. As an argument to the function, you have access to a `ContinueSDK` object with utilities such as access to certain information/actions within the IDE, the current language model, and a few other utilities. For example, here is a slash command that generates a commit message:
+To do this, push a new `SlashCommand` object to the `slashCommands` list. This object contains "name", the name that you will type to invoke the slash command, "description", the description seen in the dropdown menu, and "run". The `run` function is any async generator that should yield strings as you want them to be streamed to the UI. As an argument to the function, you have access to a `Daemonium-CoreSDK` object with utilities such as access to certain information/actions within the IDE, the current language model, and a few other utilities. For example, here is a slash command that generates a commit message:
 
-```typescript title="~/.continue/config.ts"
+```typescript title="~/.daemonium-core/config.ts"
 export function modifyConfig(config: Config): Config {
   config.slashCommands?.push({
     name: "commit",

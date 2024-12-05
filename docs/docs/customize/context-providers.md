@@ -6,7 +6,7 @@ keywords: [context, "@", provider, LLM]
 
 Context Providers allow you to type '@' and see a dropdown of content that can all be fed to the LLM as context. Every context provider is a plugin, which means if you want to reference some source of information that you don't see here, you can request (or build!) a new context provider.
 
-As an example, say you are working on solving a new GitHub Issue. You type '@Issue' and select the one you are working on. Continue can now see the issue title and contents. You also know that the issue is related to the files 'readme.md' and 'helloNested.py', so you type '@readme' and '@hello' to find and select them. Now these 3 "Context Items" are displayed inline with the rest of your input.
+As an example, say you are working on solving a new GitHub Issue. You type '@Issue' and select the one you are working on. Daemonium-Core can now see the issue title and contents. You also know that the issue is related to the files 'readme.md' and 'helloNested.py', so you type '@readme' and '@hello' to find and select them. Now these 3 "Context Items" are displayed inline with the rest of your input.
 
 ![Context Items](/img/context-provider-example.png)
 
@@ -226,8 +226,8 @@ Reference the conversation in a GitHub issue.
       "params": {
         "repos": [
           {
-            "owner": "continuedev",
-            "repo": "continue"
+            "owner": "unitylabai",
+            "repo": "daemonium-core"
           }
         ],
         "githubToken": "ghp_xxx"
@@ -386,7 +386,7 @@ The only required settings are those for creating the database connection: `host
 
 By default, the `schema` filter is set to `public`, and the `sampleRows` is set to 3. You may unset the schema if you want to include tables from all schemas.
 
-[Here is a short demo.](https://github.com/continuedev/continue/pull/859)
+[Here is a short demo.](https://github.com/unitylabai/daemonium-core/pull/859)
 
 ### `@Database`
 
@@ -497,7 +497,7 @@ Reference the architecture and platform of your current operating system.
 
 ### Model Context Protocol
 
-The [Model Context Protocol](https://modelcontextprotocol.io/introduction) is a standard proposed by Anthropic to unify prompts, context, and tool use. Continue supports any MCP server with the MCP context provider. Read their [quickstart](https://modelcontextprotocol.io/quickstart) to learn how to set up a local server and then configure your `config.json` like this:
+The [Model Context Protocol](https://modelcontextprotocol.io/introduction) is a standard proposed by Anthropic to unify prompts, context, and tool use. Daemonium-Core supports any MCP server with the MCP context provider. Read their [quickstart](https://modelcontextprotocol.io/quickstart) to learn how to set up a local server and then configure your `config.json` like this:
 
 ```json
 {
@@ -562,4 +562,4 @@ The response 200 OK should be a JSON object with the following structure:
 
 ### Requesting Context Providers
 
-Not seeing what you want? Create an issue [here](https://github.com/continuedev/continue/issues/new?assignees=TyDunn&labels=enhancement&projects=&template=feature-request-%F0%9F%92%AA.md&title=) to request a new Context Provider.
+Not seeing what you want? Create an issue [here](https://github.com/unitylabai/daemonium-core/issues/new?assignees=TyDunn&labels=enhancement&projects=&template=feature-request-%F0%9F%92%AA.md&title=) to request a new Context Provider.

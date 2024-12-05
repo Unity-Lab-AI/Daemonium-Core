@@ -3,7 +3,7 @@
 Groq provides the fastest available inference for open-source language models, including the entire Llama 3.1 family.
 
 1. Obtain an API key [here](https://console.groq.com/keys)
-2. Update your Continue config file like this:
+2. Update your Daemonium-Core config file like this:
 
 ```json title="config.json"
 {
