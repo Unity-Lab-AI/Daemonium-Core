@@ -33,7 +33,7 @@ Bedrock currently does not offer any autocomplete models.
 
 We recommend configuring [`amazon.titan-embed-text-v2:0`](https://docs.aws.amazon.com/bedrock/latest/devguide/models.html#amazon.titan-embed-text-v2-0) as your embeddings model.
 
-```json title="~/.continue/config.json"
+```json title="~/.daemonium-core/config.json"
 {
   "embeddingsProvider": {
     "title": "Embeddings Model",

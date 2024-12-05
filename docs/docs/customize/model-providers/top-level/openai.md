@@ -67,8 +67,8 @@ OpenAI compatible servers
 
 OpenAI compatible APIs
 
-- [Anyscale Endpoints](https://github.com/continuedev/deploy-os-code-llm#others)
-- [Anyscale Private Endpoints](https://github.com/continuedev/deploy-os-code-llm#anyscale-private-endpoints)
+- [Anyscale Endpoints](https://github.com/unitylabai/deploy-os-code-llm#others)
+- [Anyscale Private Endpoints](https://github.com/unitylabai/deploy-os-code-llm#anyscale-private-endpoints)
 
 If you are using an OpenAI compatible server / API, you can change the `apiBase` like this:
 

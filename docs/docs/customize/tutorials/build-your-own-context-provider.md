@@ -30,7 +30,7 @@ As an example, let's say you have a set of internal documents that have been ind
 - `description`: A longer description of the context item
 - `content`: The actual content of the context item, which will be fed to the LLM as context
 
-```typescript title="~/.continue/config.ts"
+```typescript title="~/.daemonium-core/config.ts"
 const RagContextProvider: CustomContextProvider = {
   title: "rag",
   displayTitle: "RAG",
@@ -59,7 +59,7 @@ const RagContextProvider: CustomContextProvider = {
 
 It can then be added in `config.ts` like so:
 
-```typescript title="~/.continue/config.ts"
+```typescript title="~/.daemonium-core/config.ts"
 export function modifyConfig(config: Config): Config {
   if (!config.contextProviders) {
     config.contextProviders = [];
@@ -79,7 +79,7 @@ The **"query"** type is used when you want to display a text box to the user, an
 
 The **"submenu"** type is used when you want to display a list of searchable items in the dropdown. Built-in examples include "issue" and "folder". To implement a "submenu" context provider, set `"type": "submenu"` and implement the `loadSubmenuItems` and `getContextItems` functions. Here is an example that shows a list of all README files in the current workspace:
 
-```typescript title="~/.continue/config.ts"
+```typescript title="~/.daemonium-core/config.ts"
 const ReadMeContextProvider: CustomContextProvider = {
   title: "readme",
   displayTitle: "README",
@@ -159,9 +159,9 @@ The flow of information in the above example is as follows:
 
 ## Importing outside modules
 
-To include outside Node modules in your config.ts, run `npm install <module_name>` from the `~/.continue` directory, and then import them in config.ts.
+To include outside Node modules in your config.ts, run `npm install <module_name>` from the `~/.daemonium-core` directory, and then import them in config.ts.
 
-Continue will use [esbuild](https://esbuild.github.io/) to bundle your `config.ts` and any dependencies into a single Javascript file. The exact configuration used can be found [here](https://github.com/continuedev/continue/blob/5c9874400e223bbc9786a8823614a2e501fbdaf7/extensions/vscode/src/ideProtocol.ts#L45-L52).
+Daemonium-Core will use [esbuild](https://esbuild.github.io/) to bundle your `config.ts` and any dependencies into a single Javascript file. The exact configuration used can be found [here](https://github.com/unitylabai/daemonium-core/blob/5c9874400e223bbc9786a8823614a2e501fbdaf7/extensions/vscode/src/ideProtocol.ts#L45-L52).
 
 ## `CustomContextProvider` Reference
 
@@ -201,26 +201,26 @@ The `"options"` property can be used to send additional parameters to your endpo
 
 ## Extension API for VSCode
 
-Continue exposes an API for registering context providers from a 3rd party VSCode extension. This is useful if you have a VSCode extension that provides some additional context that you would like to use in Continue. To use this API, add the following to your `package.json`:
+Daemonium-Core exposes an API for registering context providers from a 3rd party VSCode extension. This is useful if you have a VSCode extension that provides some additional context that you would like to use in Daemonium-Core. To use this API, add the following to your `package.json`:
 
 ```json title="package.json"
 {
-  "extensionDependencies": ["continue.continue"]
+  "extensionDependencies": ["daemonium-core.daemonium-core"]
 }
 ```
 
-Or install the Continue Core module from npm:
+Or install the Daemonium-Core Core module from npm:
 
 ```bash
-npm i @continuedev/core
+npm i @unitylabai/core
 ```
 
-You can add the Continue core module as a dev dependency in your `package.json`:
+You can add the Daemonium-Core core module as a dev dependency in your `package.json`:
 
 ```json title="package.json"
 {
   "devDependencies": {
-    "@continuedev/core": "^0.0.1"
+    "@unitylabai/core": "^0.0.1"
   }
 }
 ```
@@ -237,7 +237,7 @@ import {
   ContextItem,
   LoadSubmenuItemsArgs,
   ContextSubmenuItem,
-} from "@continuedev/core";
+} from "@unitylabai/core";
 
 class MyCustomProvider implements IContextProvider {
   get description(): ContextProviderDescription {
@@ -272,16 +272,16 @@ class MyCustomProvider implements IContextProvider {
 // create an instance of your custom provider
 const customProvider = new MyCustomProvider();
 
-// get Continue extension using vscode API
-const continueExt = vscode.extensions.getExtension("Continue.continue");
+// get Daemonium-Core extension using vscode API
+const daemonium-coreExt = vscode.extensions.getExtension("Daemonium-Core.daemonium-core");
 
 // get the API from the extension
-const continueApi = continueExt?.exports;
+const daemonium-coreApi = daemonium-coreExt?.exports;
 
 // register your custom provider
-continueApi?.registerCustomContextProvider(customProvider);
+daemonium-coreApi?.registerCustomContextProvider(customProvider);
 ```
 
-This will register `MyCustomProvider` with Continue!
+This will register `MyCustomProvider` with Daemonium-Core!
 
 ![alt text](./assets/image.png)

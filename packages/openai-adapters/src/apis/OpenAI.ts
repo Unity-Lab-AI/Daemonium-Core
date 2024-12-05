@@ -1,4 +1,4 @@
-import { streamSse } from "@continuedev/fetch";
+import { streamSse } from "@unitylabai/fetch";
 import fetch from "node-fetch";
 import { OpenAI } from "openai/index.mjs";
 import {

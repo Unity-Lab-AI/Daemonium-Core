@@ -7,7 +7,7 @@ sidebar_position: 3
 
 An "embeddings model" is trained to convert a piece of text into a vector, which can later be rapidly compared to other vectors to determine similarity between the pieces of text. Embeddings models are typically much smaller than LLMs, and will be extremely fast and cheap in comparison.
 
-In Continue, embeddings are generated during indexing and then used by [@Codebase](../deep-dives/codebase.md) to perform similarity search over your codebase.
+In Daemonium-Core, embeddings are generated during indexing and then used by [@Codebase](../deep-dives/codebase.md) to perform similarity search over your codebase.
 
 :::info[Default model (VS Code only)]
 `transformers.js` is used as a default embeddings model in VS Code. In JetBrains, there currently is no default.
@@ -43,7 +43,7 @@ See [here](../model-providers/top-level/ollama.md#embeddings-model) for instruct
 
 ### Transformers.js (currently VS Code only)
 
-[Transformers.js](https://huggingface.co/docs/transformers.js/index) is a JavaScript port of the popular [Transformers](https://huggingface.co/transformers/) library. It allows embeddings to be calculated entirely locally. The model used is `all-MiniLM-L6-v2`, which is shipped alongside the Continue extension.
+[Transformers.js](https://huggingface.co/docs/transformers.js/index) is a JavaScript port of the popular [Transformers](https://huggingface.co/transformers/) library. It allows embeddings to be calculated entirely locally. The model used is `all-MiniLM-L6-v2`, which is shipped alongside the Daemonium-Core extension.
 
 ```json title="config.json"
 {

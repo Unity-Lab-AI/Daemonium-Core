@@ -32,7 +32,7 @@ The `apiBase` will be listed on the Ask Sage platform when you generate an `API 
 
 ## Usage
 
-Currently, the setup for the models provided by Ask Sage is to support the following two functionalities provided by Continue.Dev: 
+Currently, the setup for the models provided by Ask Sage is to support the following two functionalities provided by Daemonium-Core.Dev: 
 
 - `Chat` to understand and iterate on code in the sidebar
 - `Edit` to modify code without leaving your current file

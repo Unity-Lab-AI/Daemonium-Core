@@ -5,7 +5,7 @@ keywords: [customize]
 sidebar_position: 5
 ---
 
-Continue offers a handful of parameters in [`config.json`](../reference.md) that can be tuned to find the perfect balance between suggestion quality and system performance for your specific needs and hardware capabilities:
+Daemonium-Core offers a handful of parameters in [`config.json`](../reference.md) that can be tuned to find the perfect balance between suggestion quality and system performance for your specific needs and hardware capabilities:
 
 ```json title="config.json"
  "tabAutocompleteOptions": {

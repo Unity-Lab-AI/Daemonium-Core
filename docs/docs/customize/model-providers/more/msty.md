@@ -1,6 +1,6 @@
 # Msty
 
-[Msty](https://msty.app/) is an application for Windows, Mac, and Linux that makes it really easy to run online as well as local open-source models, including Llama-2, DeepSeek Coder, etc. No need to fidget with your terminal, run a command, or anything. Just download the app from the website, click a button, and you are up and running. Continue can then be configured to use the `Msty` LLM class:
+[Msty](https://msty.app/) is an application for Windows, Mac, and Linux that makes it really easy to run online as well as local open-source models, including Llama-2, DeepSeek Coder, etc. No need to fidget with your terminal, run a command, or anything. Just download the app from the website, click a button, and you are up and running. Daemonium-Core can then be configured to use the `Msty` LLM class:
 
 ```json title="config.json"
 {
@@ -47,4 +47,4 @@ If you need to send custom headers for authentication, you may use the `requestO
 }
 ```
 
-[View the source](https://github.com/continuedev/continue/blob/main/core/llm/llms/Msty.ts)
+[View the source](https://github.com/unitylabai/daemonium-core/blob/main/core/llm/llms/Msty.ts)

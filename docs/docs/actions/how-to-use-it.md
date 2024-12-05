@@ -18,7 +18,7 @@ The most common way to invoke an action is with a slash command. These are short
 
 ![slash-commands](/img/slash-commands.png)
 
-A few of the most useful slash commands are available by default, like “/edit”, “/comment”, and “/share”, but Continue has a large built-in library of other options. To enable these, learn more [here](../customize/slash-commands.md).
+A few of the most useful slash commands are available by default, like “/edit”, “/comment”, and “/share”, but Daemonium-Core has a large built-in library of other options. To enable these, learn more [here](../customize/slash-commands.md).
 
 ### Prompt files
 
@@ -27,7 +27,7 @@ It is also possible to write your own slash command by defining a “.prompt fil
 The full .prompt file reference can be found [here](../customize/deep-dives/prompt-files.md).
 
 :::tip[Prompt library]
-To assist you in getting started, [we've curated a small library of `.prompt` files](https://github.com/continuedev/prompt-file-examples). We encourage community contributions to this repository, so please consider opening up a pull request with your own prompts!
+To assist you in getting started, [we've curated a small library of `.prompt` files](https://github.com/unitylabai/prompt-file-examples). We encourage community contributions to this repository, so please consider opening up a pull request with your own prompts!
 :::
 
 Below is a quick example of setting up a prompt file to write unit tests using Jest.
@@ -48,7 +48,7 @@ Write unit tests for the above selected code, following each of these instructio
 - Don't explain how to set up `jest`
 ```
 
-Now to use this prompt, you can highlight code and use <kbd>cmd/ctrl</kbd> + <kbd>L</kbd> to select it in the Continue sidebar.
+Now to use this prompt, you can highlight code and use <kbd>cmd/ctrl</kbd> + <kbd>L</kbd> to select it in the Daemonium-Core sidebar.
 
 Then, type "/" to see the list of slash commands and choose the one called "test". Press enter and the LLM will respond given the instructions from your prompt file.
 
@@ -66,7 +66,7 @@ Quick Actions are displayed as buttons above top-level classes and functions in 
 
 ![quick-actions](/img/quick-actions.png)
 
-By default, quick actions are disabled, but can be enabled with the “Continue: Enable Quick Actions” in VS Code settings.
+By default, quick actions are disabled, but can be enabled with the “Daemonium-Core: Enable Quick Actions” in VS Code settings.
 
 #### Right click actions
 
@@ -80,6 +80,6 @@ The debug action is a special built-in keyboard shortcut in the VS Code extensio
 
 #### Quick fixes
 
-Whenever you see red/yellow underlines in your code indicating errors, you can place your cursor nearby and VS Code will display a lightbulb icon. Either clicking the lightbulb or using the keyboard shortcut <kbd>cmd/ctrl</kbd> + <kbd>.</kbd> will show a dropdown menu of quick fixes. One of these will be the “Ask Continue” action. Either click or use <kbd>cmd/ctrl</kbd> + <kbd>.</kbd> again and Continue will attempt to help solve the problem.
+Whenever you see red/yellow underlines in your code indicating errors, you can place your cursor nearby and VS Code will display a lightbulb icon. Either clicking the lightbulb or using the keyboard shortcut <kbd>cmd/ctrl</kbd> + <kbd>.</kbd> will show a dropdown menu of quick fixes. One of these will be the “Ask Daemonium-Core” action. Either click or use <kbd>cmd/ctrl</kbd> + <kbd>.</kbd> again and Daemonium-Core will attempt to help solve the problem.
 
-![ask-continue](/img/ask-continue.png)
+![ask-daemonium-core](/img/ask-daemonium-core.png)

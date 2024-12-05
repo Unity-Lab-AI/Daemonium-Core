@@ -4,7 +4,7 @@ description: Troubleshooting while waiting for help during beta / alpha testing
 keywords: [reload, delete, manually, logs, server, console]
 ---
 
-The Continue VS Code extension is currently in beta, and the JetBrains extension is in Alpha. If you are having trouble, please follow the steps below.
+The Daemonium-Core VS Code extension is currently in beta, and the JetBrains extension is in Alpha. If you are having trouble, please follow the steps below.
 
 1. [Check the logs](#check-the-logs)
 2. [Try the latest pre-release](#download-the-latest-pre-release)
@@ -35,12 +35,12 @@ In order to view debug logs, which contain extra information, click the dropdown
 If you're getting a response from the LLM that doesn't seem to make sense, you can
 
 1. Open the "Output" panel (right next to the terminal)
-2. In the dropdown, select "Continue - LLM Prompts/Completions"
+2. In the dropdown, select "Daemonium-Core - LLM Prompts/Completions"
 3. View the exact prompts that were sent to the LLM and the completions recieved
 
 ### JetBrains
 
-Open `~/.continue/logs/core.log` to view the logs for the Continue plugin. The most recent logs are found at the bottom of the file.
+Open `~/.daemonium-core/logs/core.log` to view the logs for the Daemonium-Core plugin. The most recent logs are found at the bottom of the file.
 
 Some JetBrains-related logs may also be found by clicking "Help" > "Show Log in Explorer/Finder".
 
@@ -48,7 +48,7 @@ Some JetBrains-related logs may also be found by clicking "Help" > "Show Log in 
 
 ### VS Code
 
-We are constantly making fixes and improvements to Continue, but the latest changes remain in a "pre-release" version for roughly a week so that we can test their stability. If you are experiencing issues, you can try the pre-release by going to the Continue extension page in VS Code and selecting "Switch to Pre-Release" as shown below.
+We are constantly making fixes and improvements to Daemonium-Core, but the latest changes remain in a "pre-release" version for roughly a week so that we can test their stability. If you are experiencing issues, you can try the pre-release by going to the Daemonium-Core extension page in VS Code and selecting "Switch to Pre-Release" as shown below.
 
 ![Pre-Release](../static/img/prerelease.png)
 
@@ -66,13 +66,13 @@ On JetBrains, the "pre-release" happens through their Early Access Program (EAP)
 
 If you've tried everything, reported an error, know that a previous version was working for you, and are waiting to hear back, you can try downloading an older version of the extension.
 
-For VS Code, All versions are hosted on the Open VSX Registry [here](https://open-vsx.org/extension/Continue/continue). Once you've downloaded the extension, which will be a .vsix file, you can install it manually by following the instructions [here](https://code.visualstudio.com/docs/editor/extension-gallery#_install-from-a-vsix).
+For VS Code, All versions are hosted on the Open VSX Registry [here](https://open-vsx.org/extension/Daemonium-Core/daemonium-core). Once you've downloaded the extension, which will be a .vsix file, you can install it manually by following the instructions [here](https://code.visualstudio.com/docs/editor/extension-gallery#_install-from-a-vsix).
 
-You can find older versions of the JetBrains extension on their [marketplace](https://plugins.jetbrains.com/plugin/22707-continue), which will walk you through installing from disk.
+You can find older versions of the JetBrains extension on their [marketplace](https://plugins.jetbrains.com/plugin/22707-daemonium-core), which will walk you through installing from disk.
 
 ## Keyboard shortcuts not resolving
 
-If your keyboard shortcuts are not resolving, you may have other commands that are taking precedence over the Continue shortcuts. You can see if this is the case, and change your shortcut mappings, in the configuration of your IDE.
+If your keyboard shortcuts are not resolving, you may have other commands that are taking precedence over the Daemonium-Core shortcuts. You can see if this is the case, and change your shortcut mappings, in the configuration of your IDE.
 
 - [VSCode keyboard shortcuts docs](https://code.visualstudio.com/docs/getstarted/keybindings)
 - [IntelliJ keyboard shortcut docs](https://www.jetbrains.com/help/idea/configuring-keyboard-and-mouse-shortcuts.html)
@@ -108,11 +108,11 @@ If you are using VS Code and require requests to be made through a proxy, you ar
 
 #### code-server
 
-Continue can be used in [code-server](https://coder.com/), but if you are running across an error in the logs that includes "This is likely because the editor is not running in a secure context", please see [their documentation on securely exposing code-server](https://coder.com/docs/code-server/latest/guide#expose-code-server).
+Daemonium-Core can be used in [code-server](https://coder.com/), but if you are running across an error in the logs that includes "This is likely because the editor is not running in a secure context", please see [their documentation on securely exposing code-server](https://coder.com/docs/code-server/latest/guide#expose-code-server).
 
-### I installed Continue, but don't see the sidebar window
+### I installed Daemonium-Core, but don't see the sidebar window
 
-By default the Continue window is on the left side of VS Code, but it can be dragged to right side as well, which we recommend in our tutorial. In the situation where you have previously installed Continue and moved it to the right side, it may still be there. You can reveal Continue either by using cmd/ctrl+L or by clicking the button in the top right of VS Code to open the right sidebar.
+By default the Daemonium-Core window is on the left side of VS Code, but it can be dragged to right side as well, which we recommend in our tutorial. In the situation where you have previously installed Daemonium-Core and moved it to the right side, it may still be there. You can reveal Daemonium-Core either by using cmd/ctrl+L or by clicking the button in the top right of VS Code to open the right sidebar.
 
 ### I'm getting a 404 error from OpenAI
 
@@ -122,12 +122,12 @@ If you have entered a valid API key and model, but are still getting a 404 error
 
 If you are having persistent errors with indexing, our recommendation is to rebuild your index from scratch. Note that for large codebases this may take some time.
 
-This can be accomplished using the following command: `Continue: Rebuild codebase index`.
+This can be accomplished using the following command: `Daemonium-Core: Rebuild codebase index`.
 
 ### Android Studio - "Nothing to show" in Chat
 
-This can be fixed by selecting `Actions > Choose Boot runtime for the IDE` then selecting the latest version, and then restarting Android Studio. [See this thread](https://github.com/continuedev/continue/issues/596#issuecomment-1789327178) for details.
+This can be fixed by selecting `Actions > Choose Boot runtime for the IDE` then selecting the latest version, and then restarting Android Studio. [See this thread](https://github.com/unitylabai/daemonium-core/issues/596#issuecomment-1789327178) for details.
 
 ## Still having trouble?
 
-You can also join our Discord community [here](https://discord.gg/vapESyrFmJ) for additional support and discussions. Alternatively, you can create a GitHub issue [here](https://github.com/continuedev/continue/issues/new?assignees=&labels=bug&projects=&template=bug-report-%F0%9F%90%9B.md&title=), providing details of your problem, and we'll be able to help you out more quickly.
+You can also join our Discord community [here](https://discord.gg/vapESyrFmJ) for additional support and discussions. Alternatively, you can create a GitHub issue [here](https://github.com/unitylabai/daemonium-core/issues/new?assignees=&labels=bug&projects=&template=bug-report-%F0%9F%90%9B.md&title=), providing details of your problem, and we'll be able to help you out more quickly.

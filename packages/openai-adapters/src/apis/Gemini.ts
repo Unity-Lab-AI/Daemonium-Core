@@ -1,4 +1,4 @@
-import { streamResponse } from "@continuedev/fetch";
+import { streamResponse } from "@unitylabai/fetch";
 import fetch from "node-fetch";
 import { OpenAI } from "openai/index.mjs";
 import {
@@ -174,7 +174,7 @@ export class GeminiApi implements BaseLlmApi {
           data = JSON.parse(part);
         } catch (e) {
           foundIncomplete = true;
-          continue; // yo!
+          daemonium-core; // yo!
         }
         if (data.error) {
           throw new Error(data.error.message);

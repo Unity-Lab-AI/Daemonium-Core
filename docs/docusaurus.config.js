@@ -7,21 +7,21 @@ const darkCodeTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Continue",
+  title: "Daemonium-Core",
   tagline:
     "the open-source library for accelerating software development with language models",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://continue.dev",
+  url: "https://unitylabai.com",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "continuedev", // Usually your GitHub org/user name.
-  projectName: "continue", // Usually your repo name.
+  organizationName: "unitylabai", // Usually your GitHub org/user name.
+  projectName: "daemonium-core", // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -47,7 +47,7 @@ const config = {
         docs: {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/continuedev/continue/tree/main/docs",
+          editUrl: "https://github.com/unitylabai/daemonium-core/tree/main/docs",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -70,13 +70,13 @@ const config = {
         },
       ],
       // Replace with your project's social card
-      image: "https://docs.continue.dev/img/continue-social-card.png",
+      image: "https://docs.unitylabai.com/img/daemonium-core-social-card.png",
       navbar: {
-        title: "Continue",
+        title: "Daemonium-Core",
         logo: {
-          alt: "Continue Logo",
+          alt: "Daemonium-Core Logo",
           src: "img/logo.png",
-          href: "https://continue.dev",
+          href: "https://unitylabai.com",
           target: "_blank",
         },
         items: [
@@ -102,7 +102,7 @@ const config = {
             href: "/reference",
           },
           {
-            to: "https://github.com/continuedev/continue",
+            to: "https://github.com/unitylabai/daemonium-core",
             label: "GitHub",
             position: "right",
             className: "github-navbar",
@@ -127,11 +127,11 @@ const config = {
             items: [
               {
                 label: "VS Code",
-                to: "https://marketplace.visualstudio.com/items?itemName=Continue.continue",
+                to: "https://marketplace.visualstudio.com/items?itemName=Daemonium-Core.daemonium-core",
               },
               {
                 label: "JetBrains",
-                to: "https://plugins.jetbrains.com/plugin/22707-continue-extension",
+                to: "https://plugins.jetbrains.com/plugin/22707-daemonium-core-extension",
               },
             ],
           },
@@ -144,7 +144,7 @@ const config = {
               },
               {
                 label: "GitHub",
-                to: "https://github.com/continuedev/continue",
+                to: "https://github.com/unitylabai/daemonium-core",
               },
             ],
           },
@@ -153,16 +153,16 @@ const config = {
             items: [
               {
                 label: "Twitter",
-                to: "https://twitter.com/continuedev",
+                to: "https://twitter.com/unitylabai",
               },
               {
                 label: "LinkedIn",
-                to: "https://linkedin.com/company/continuedev",
+                to: "https://linkedin.com/company/unitylabai",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Continue Dev, Inc.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Daemonium-Core Dev, Inc.`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -176,7 +176,7 @@ const config = {
         // Public API key: it is safe to commit it
         apiKey: "6795de0f612eebe17018f8061a9ef18e",
 
-        indexName: "continue",
+        indexName: "daemonium-core",
 
         // Optional: see doc section below
         contextualSearch: true,
@@ -210,7 +210,7 @@ const config = {
               "/model-setup/select-model",
               "/model-setup/configuration",
               "/quickstart",
-              "/how-to-use-continue",
+              "/how-to-use-daemonium-core",
             ],
           },
           {
@@ -308,8 +308,8 @@ const config = {
             from: "/walkthroughs/llama3.1",
           },
           {
-            to: "/customize/tutorials/running-continue-without-internet",
-            from: "/walkthroughs/running-continue-without-internet",
+            to: "/customize/tutorials/running-daemonium-core-without-internet",
+            from: "/walkthroughs/running-daemonium-core-without-internet",
           },
           {
             to: "/customize/tutorials/set-up-codestral",

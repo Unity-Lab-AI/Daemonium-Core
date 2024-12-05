@@ -3,8 +3,8 @@
 Cerebras Inference uses specialized silicon to provides fast inference.
 
 1. Create an account in the portal [here](https://cloud.cerebras.ai/).
-2. Create and copy the API key for use in Continue.
-3. Update your Continue config file:
+2. Create and copy the API key for use in Daemonium-Core.
+3. Update your Daemonium-Core config file:
 
 ```json title="config.json"
 {

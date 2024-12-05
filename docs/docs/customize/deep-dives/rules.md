@@ -1,23 +1,23 @@
 ---
-description: Learn how to customize the system prompt with a `.continuerules` file
-keywords: [rules, .continuerules, system, prompt, message]
+description: Learn how to customize the system prompt with a `.daemonium-corerules` file
+keywords: [rules, .daemonium-corerules, system, prompt, message]
 ---
 
-# `.continuerules`
+# `.daemonium-corerules`
 
-You can create a project-specific system message by adding a `.continuerules` file to the root of your project. This file is raw text and its contents will be inserted into the system message for all chat requests. Rules are not used for autocomplete.
+You can create a project-specific system message by adding a `.daemonium-corerules` file to the root of your project. This file is raw text and its contents will be inserted into the system message for all chat requests. Rules are not used for autocomplete.
 
 ## Simple Examples
 
 - If you want concise answers:
 
-```title=.continuerules
+```title=.daemonium-corerules
 Please provide concise answers. Do explain obvious concepts. You can assume that I am knowledgable about most programming topics.
 ```
 
 - If you want to ensure certain practices are followed, for example in React:
 
-```title=.continuerules
+```title=.daemonium-corerules
 Whenever you are writing React code, make sure to
 - use functional components instead of class components
 - use hooks for state management

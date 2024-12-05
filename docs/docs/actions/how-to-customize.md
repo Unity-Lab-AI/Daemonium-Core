@@ -7,7 +7,7 @@ sidebar_position: 5
 
 ## Built-in slash commands
 
-Continue has a large library of built-in slash commands, but when you first install we only display the most commonly used ones, like “/edit”, “/comment”, and “/share”. To add more actions, you can open [config.json](../reference.md) and add them to the `slashCommands` array.
+Daemonium-Core has a large library of built-in slash commands, but when you first install we only display the most commonly used ones, like “/edit”, “/comment”, and “/share”. To add more actions, you can open [config.json](../reference.md) and add them to the `slashCommands` array.
 
 ## Custom slash commands
 
@@ -25,7 +25,7 @@ Before adding a custom slash command, we recommend reading the [introduction to 
 
 If you want to go a step further than writing custom commands with natural language, you can write a custom function that returns the response. This requires using `config.ts` instead of `config.json`.
 
-To do this, push a new `SlashCommand` object to the `slashCommands` list. This object contains "name", the name that you will type to invoke the slash command, "description", the description seen in the dropdown menu, and "run". The `run` function is any async generator that should yield strings as you want them to be streamed to the UI. As an argument to the function, you have access to a `ContinueSDK` object with utilities such as access to certain information/actions within the IDE, the current language model, and a few other utilities. For example, here is a slash command that generates a commit message:
+To do this, push a new `SlashCommand` object to the `slashCommands` list. This object contains "name", the name that you will type to invoke the slash command, "description", the description seen in the dropdown menu, and "run". The `run` function is any async generator that should yield strings as you want them to be streamed to the UI. As an argument to the function, you have access to a `Daemonium-CoreSDK` object with utilities such as access to certain information/actions within the IDE, the current language model, and a few other utilities. For example, here is a slash command that generates a commit message:
 
 ```typescript title="config.ts"
 export function modifyConfig(config: Config): Config {

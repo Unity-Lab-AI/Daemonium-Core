@@ -1,27 +1,27 @@
 {
-  "name": "continue",
+  "name": "daemonium-core",
   "icon": "media/icon.png",
-  "author": "Continue Dev, Inc",
+  "author": "Unity Lab AI",
   "version": "0.9.242",
   "repository": {
     "type": "git",
-    "url": "https://github.com/continuedev/continue"
+    "url": "https://github.com/Unity-Lab-AI/Daemonium-Core"
   },
   "extensionKind": [
     "ui",
     "workspace"
   ],
   "bugs": {
-    "url": "https://github.com/continuedev/continue/issues",
-    "email": "nate@continue.dev"
+    "url": "https://github.com/Unity-Lab-AI/Daemonium-Core/issues",
+    "email": "support@unitylabai.com"
   },
-  "homepage": "https://continue.dev",
-  "qna": "https://github.com/continuedev/continue/issues/new/choose",
+  "homepage": "https://unitylabai.com",
+  "qna": "https://github.com/Unity-Lab-AI/Daemonium-Core/issues/new/choose",
   "license": "Apache-2.0",
-  "displayName": "Continue - Codestral, Claude, and more",
+  "displayName": "Daemonium-Core - AI Code Assistant",
   "pricing": "Free",
   "description": "The leading open-source AI code assistant",
-  "publisher": "Continue",
+  "publisher": "Unity Lab AI",
   "engines": {
     "vscode": "^1.70.0",
     "node": ">=20.11.0"
@@ -53,21 +53,21 @@
   ],
   "activationEvents": [
     "onStartupFinished",
-    "onView:continueGUIView"
+    "onView:daemoniumCoreGUIView"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "authentication": [
       {
-        "id": "continue",
-        "label": "Continue"
+        "id": "daemonium-core",
+        "label": "Daemonium-Core"
       }
     ],
     "languages": [
       {
         "filenames": [
           "config.json",
-          ".continuerc.json"
+          ".daemoniumrc.json"
         ],
         "id": "jsonc"
       },
@@ -90,59 +90,59 @@
       }
     ],
     "configuration": {
-      "title": "Continue",
+      "title": "Daemonium-Core",
       "properties": {
-        "continue.telemetryEnabled": {
+        "daemonium-core.telemetryEnabled": {
           "type": "boolean",
           "default": true,
-          "markdownDescription": "Continue collects anonymous usage data, cleaned of PII, to help us improve the product for our users. Read more  at [continue.dev › Telemetry](https://docs.continue.dev/telemetry)."
+          "markdownDescription": "Daemonium-Core collects anonymous usage data, cleaned of PII, to help us improve the product for our users. Read more at [unitylabai.com › Telemetry](https://docs.unitylabai.com/telemetry)."
         },
-        "continue.enableContinueForTeams": {
+        "daemonium-core.enableTeamsFeatures": {
           "type": "boolean",
           "default": false,
-          "markdownDescription": "Enable Continue for teams beta features. To sign in, click the person icon in the bottom right of the sidebar."
+          "markdownDescription": "Enable Daemonium-Core team features. To sign in, click the person icon in the bottom right of the sidebar."
         },
-        "continue.showInlineTip": {
+        "daemonium-core.showInlineTip": {
           "type": "boolean",
           "default": true,
-          "description": "Show inline suggestion to use the Continue keyboard shortcuts (e.g. \"Cmd/Ctrl L to select code, Cmd/Ctrl I to edit\")."
+          "description": "Show inline suggestion to use the Daemonium-Core keyboard shortcuts (e.g. \"Cmd/Ctrl L to select code, Cmd/Ctrl I to edit\")."
         },
-        "continue.enableQuickActions": {
+        "daemonium-core.enableQuickActions": {
           "type": "boolean",
           "default": false,
-          "markdownDescription": "Enable the experimental Quick Actions feature. Read our walkthrough to learn about configuration and how to share feedback: [continue.dev › Walkthrough: Quick Actions (experimental)](https://docs.continue.dev/features/quick-actions)"
+          "markdownDescription": "Enable the experimental Quick Actions feature. Read our walkthrough to learn about configuration and how to share feedback: [unitylabai.com › Walkthrough: Quick Actions (experimental)](https://docs.unitylabai.com/features/quick-actions)"
         },
-        "continue.enableTabAutocomplete": {
+        "daemonium-core.enableTabAutocomplete": {
           "type": "boolean",
           "default": true,
-          "markdownDescription": "Enable Continue's tab autocomplete feature. Read our walkthrough to learn about configuration and how to share feedback: [continue.dev › Walkthrough: Tab Autocomplete (beta)](https://docs.continue.dev/features/tab-autocomplete)"
+          "markdownDescription": "Enable Daemonium-Core's tab autocomplete feature. Read our walkthrough to learn about configuration and how to share feedback: [unitylabai.com › Walkthrough: Tab Autocomplete (beta)](https://docs.unitylabai.com/features/tab-autocomplete)"
         },
-        "continue.pauseTabAutocompleteOnBattery": {
+        "daemonium-core.pauseTabAutocompleteOnBattery": {
           "type": "boolean",
           "default": false,
-          "markdownDescription": "Pause Continue's tab autocomplete feature when your battery is low."
+          "markdownDescription": "Pause Daemonium-Core's tab autocomplete feature when your battery is low."
         },
-        "continue.pauseCodebaseIndexOnStart": {
+        "daemonium-core.pauseCodebaseIndexOnStart": {
           "type": "boolean",
           "default": false,
-          "markdownDescription": "Pause Continue's codebase index on start."
+          "markdownDescription": "Pause Daemonium-Core's codebase index on start."
         },
-        "continue.enableDebugLogs": {
+        "daemonium-core.enableDebugLogs": {
           "type": "boolean",
           "default": false,
-          "markdownDescription": "Enable Continue Debug Logs in the Output panel."
+          "markdownDescription": "Enable Daemonium-Core Debug Logs in the Output panel."
         },
-        "continue.remoteConfigServerUrl": {
+        "daemonium-core.remoteConfigServerUrl": {
           "type": "string",
           "default": null,
           "markdownDescription": "If your team is set up to use shared configuration, enter the server URL here and your user token below to enable automatic syncing."
         },
-        "continue.userToken": {
+        "daemonium-core.userToken": {
           "type": "string",
           "default": null,
           "markdownDescription": "If your team is set up to use shared configuration, enter your user token here and your server URL above to enable automatic syncing."
         },
-        "continue.remoteConfigSyncPeriod": {
+        "daemonium-core.remoteConfigSyncPeriod": {
           "type": "number",
           "default": 60,
           "description": "The period of time in minutes between automatic syncs."
@@ -151,418 +151,418 @@
     },
     "commands": [
       {
-        "command": "continue.applyCodeFromChat",
-        "category": "Continue",
+        "command": "daemonium-core.applyCodeFromChat",
+        "category": "Daemonium-Core",
         "title": "Apply code from chat",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.acceptDiff",
-        "category": "Continue",
+        "command": "daemonium-core.acceptDiff",
+        "category": "Daemonium-Core",
         "title": "Accept Diff",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.rejectDiff",
-        "category": "Continue",
+        "command": "daemonium-core.rejectDiff",
+        "category": "Daemonium-Core",
         "title": "Reject Diff",
-        "group": "Continue",
+        "group": "Daemonium-Core",
         "icon": "$(stop)"
       },
       {
-        "command": "continue.acceptVerticalDiffBlock",
-        "category": "Continue",
+        "command": "daemonium-core.acceptVerticalDiffBlock",
+        "category": "Daemonium-Core",
         "title": "Accept Vertical Diff Block",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.rejectVerticalDiffBlock",
-        "category": "Continue",
+        "command": "daemonium-core.rejectVerticalDiffBlock",
+        "category": "Daemonium-Core",
         "title": "Reject Vertical Diff Block",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.focusEdit",
-        "category": "Continue",
+        "command": "daemonium-core.focusEdit",
+        "category": "Daemonium-Core",
         "title": "Generate Code",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.focusContinueInput",
-        "category": "Continue",
+        "command": "daemonium-core.focusDaemoniumCoreInput",
+        "category": "Daemonium-Core",
         "title": "Add Highlighted Code to Context and Clear Chat",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.focusContinueInputWithoutClear",
-        "category": "Continue",
+        "command": "daemonium-core.focusDaemoniumCoreInputWithoutClear",
+        "category": "Daemonium-Core",
         "title": "Add Highlighted Code to Context",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.debugTerminal",
-        "category": "Continue",
+        "command": "daemonium-core.debugTerminal",
+        "category": "Daemonium-Core",
         "title": "Debug Terminal",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.exitEditMode",
-        "category": "Continue",
+        "command": "daemonium-core.exitEditMode",
+        "category": "Daemonium-Core",
         "title": "Exit Edit Mode",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.toggleFullScreen",
-        "category": "Continue",
+        "command": "daemonium-core.toggleFullScreen",
+        "category": "Daemonium-Core",
         "title": "Toggle Full Screen",
         "icon": "$(fullscreen)",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.openConfig",
-        "category": "Continue",
-        "title": "Open Continue Config",
+        "command": "daemonium-core.openConfig",
+        "category": "Daemonium-Core",
+        "title": "Open Daemonium-Core Config",
         "icon": "$(gear)",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.toggleTabAutocompleteEnabled",
-        "category": "Continue",
+        "command": "daemonium-core.toggleTabAutocompleteEnabled",
+        "category": "Daemonium-Core",
         "title": "Toggle Autocomplete Enabled",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.selectFilesAsContext",
-        "category": "Continue",
+        "command": "daemonium-core.selectFilesAsContext",
+        "category": "Daemonium-Core",
         "title": "Select Files as Context",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.newSession",
-        "category": "Continue",
+        "command": "daemonium-core.newSession",
+        "category": "Daemonium-Core",
         "title": "New Session",
         "icon": "$(add)",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.viewHistory",
-        "category": "Continue",
+        "command": "daemonium-core.viewHistory",
+        "category": "Daemonium-Core",
         "title": "View History",
         "icon": "$(history)",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.viewLogs",
-        "category": "Continue",
+        "command": "daemonium-core.viewLogs",
+        "category": "Daemonium-Core",
         "title": "View History",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.navigateTo",
-        "category": "Continue",
+        "command": "daemonium-core.navigateTo",
+        "category": "Daemonium-Core",
         "title": "Navigate to a path",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.openMorePage",
-        "category": "Continue",
+        "command": "daemonium-core.openMorePage",
+        "category": "Daemonium-Core",
         "title": "More",
         "icon": "$(ellipsis)",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.writeCommentsForCode",
-        "category": "Continue",
+        "command": "daemonium-core.writeCommentsForCode",
+        "category": "Daemonium-Core",
         "title": "Write Comments for this Code",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.writeDocstringForCode",
-        "category": "Continue",
+        "command": "daemonium-core.writeDocstringForCode",
+        "category": "Daemonium-Core",
         "title": "Write a Docstring for this Code",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.fixCode",
-        "category": "Continue",
+        "command": "daemonium-core.fixCode",
+        "category": "Daemonium-Core",
         "title": "Fix this Code",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.optimizeCode",
-        "category": "Continue",
+        "command": "daemonium-core.optimizeCode",
+        "category": "Daemonium-Core",
         "title": "Optimize this Code",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.fixGrammar",
-        "category": "Continue",
+        "command": "daemonium-core.fixGrammar",
+        "category": "Daemonium-Core",
         "title": "Fix Grammar / Spelling",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.codebaseForceReIndex",
-        "category": "Continue",
+        "command": "daemonium-core.codebaseForceReIndex",
+        "category": "Daemonium-Core",
         "title": "Codebase Force Re-Index",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.rebuildCodebaseIndex",
-        "category": "Continue",
+        "command": "daemonium-core.rebuildCodebaseIndex",
+        "category": "Daemonium-Core",
         "title": "Rebuild codebase index",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.docsIndex",
-        "category": "Continue",
+        "command": "daemonium-core.docsIndex",
+        "category": "Daemonium-Core",
         "title": "Docs Index",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.docsReIndex",
-        "category": "Continue",
+        "command": "daemonium-core.docsReIndex",
+        "category": "Daemonium-Core",
         "title": "Docs Force Re-Index",
-        "group": "Continue"
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.focusContinueSessionId",
-        "category": "Continue",
-        "title": "Focus Continue Chat",
-        "group": "Continue"
+        "command": "daemonium-core.focusDaemoniumCoreSessionId",
+        "category": "Daemonium-Core",
+        "title": "Focus Daemonium-Core Chat",
+        "group": "Daemonium-Core"
       },
       {
-        "command": "continue.signInToControlPlane",
+        "command": "daemonium-core.signInToControlPlane",
         "title": "Sign In",
-        "category": "Continue",
-        "group": "Continue",
+        "category": "Daemonium-Core",
+        "group": "Daemonium-Core",
         "icon": "$(account)"
       },
       {
-        "command": "continue.openAccountDialog",
+        "command": "daemonium-core.openAccountDialog",
         "title": "Account",
-        "category": "Continue",
-        "group": "Continue",
+        "category": "Daemonium-Core",
+        "group": "Daemonium-Core",
         "icon": "$(account)"
       }
     ],
     "keybindings": [
       {
-        "command": "continue.focusContinueInput",
+        "command": "daemonium-core.focusDaemoniumCoreInput",
         "mac": "cmd+l",
         "key": "ctrl+l"
       },
       {
-        "command": "continue.focusContinueInputWithoutClear",
+        "command": "daemonium-core.focusDaemoniumCoreInputWithoutClear",
         "mac": "cmd+shift+l",
         "key": "ctrl+shift+l"
       },
       {
-        "command": "continue.acceptDiff",
+        "command": "daemonium-core.acceptDiff",
         "mac": "shift+cmd+enter",
         "key": "shift+ctrl+enter",
-        "when": "continue.diffVisible"
+        "when": "daemonium-core.diffVisible"
       },
       {
-        "command": "continue.rejectDiff",
+        "command": "daemonium-core.rejectDiff",
         "mac": "shift+cmd+backspace",
         "key": "shift+ctrl+backspace",
-        "when": "continue.diffVisible"
+        "when": "daemonium-core.diffVisible"
       },
       {
-        "command": "continue.rejectDiff",
+        "command": "daemonium-core.rejectDiff",
         "mac": "cmd+z",
         "key": "ctrl+z",
-        "when": "continue.diffVisible"
+        "when": "daemonium-core.diffVisible"
       },
       {
-        "command": "continue.quickEditHistoryUp",
+        "command": "daemonium-core.quickEditHistoryUp",
         "mac": "up",
         "key": "up",
-        "when": "false && continue.quickEditHistoryFocused"
+        "when": "false && daemonium-core.quickEditHistoryFocused"
       },
       {
-        "command": "continue.quickEditHistoryDown",
+        "command": "daemonium-core.quickEditHistoryDown",
         "mac": "down",
         "key": "down",
-        "when": "false && continue.quickEditHistoryFocused"
+        "when": "false && daemonium-core.quickEditHistoryFocused"
       },
       {
-        "command": "continue.acceptVerticalDiffBlock",
+        "command": "daemonium-core.acceptVerticalDiffBlock",
         "mac": "alt+cmd+y",
         "key": "alt+ctrl+y"
       },
       {
-        "command": "continue.rejectVerticalDiffBlock",
+        "command": "daemonium-core.rejectVerticalDiffBlock",
         "mac": "alt+cmd+n",
         "key": "alt+ctrl+n"
       },
       {
-        "command": "continue.focusEdit",
+        "command": "daemonium-core.focusEdit",
         "title": "Edit code with natural language",
         "mac": "cmd+i",
         "key": "ctrl+i"
       },
       {
-        "command": "continue.focusEditWithoutClear",
+        "command": "daemonium-core.focusEditWithoutClear",
         "mac": "cmd+shift+i",
         "key": "ctrl+shift+i"
       },
       {
-        "command": "continue.exitEditMode",
+        "command": "daemonium-core.exitEditMode",
         "mac": "escape",
         "key": "escape",
-        "when": "continue.inEditMode && editorFocus"
+        "when": "daemonium-core.inEditMode && editorFocus"
       },
       {
-        "command": "continue.debugTerminal",
+        "command": "daemonium-core.debugTerminal",
         "mac": "cmd+shift+r",
         "key": "ctrl+shift+r"
       },
       {
-        "command": "continue.toggleFullScreen",
+        "command": "daemonium-core.toggleFullScreen",
         "mac": "cmd+k cmd+m",
         "key": "ctrl+k ctrl+m",
         "when": "!terminalFocus"
       },
       {
-        "command": "continue.toggleTabAutocompleteEnabled",
+        "command": "daemonium-core.toggleTabAutocompleteEnabled",
         "mac": "cmd+k cmd+a",
         "key": "ctrl+k ctrl+a",
         "when": "!terminalFocus"
       },
       {
-        "command": "continue.applyCodeFromChat",
+        "command": "daemonium-core.applyCodeFromChat",
         "mac": "alt+a",
         "key": "alt+a"
       }
     ],
     "submenus": [
       {
-        "id": "continue.continueSubMenu",
-        "label": "Continue"
+        "id": "daemonium-core.mainSubMenu",
+        "label": "Daemonium-Core"
       }
     ],
     "menus": {
       "commandPalette": [
         {
-          "command": "continue.focusContinueInput"
+          "command": "daemonium-core.focusDaemoniumCoreInput"
         },
         {
-          "command": "continue.focusContinueInputWithoutClear"
+          "command": "daemonium-core.focusDaemoniumCoreInputWithoutClear"
         },
         {
-          "command": "continue.debugTerminal"
+          "command": "daemonium-core.debugTerminal"
         },
         {
-          "command": "continue.toggleFullScreen"
+          "command": "daemonium-core.toggleFullScreen"
         },
         {
-          "command": "continue.newSession"
+          "command": "daemonium-core.newSession"
         }
       ],
       "editor/context": [
         {
-          "submenu": "continue.continueSubMenu",
-          "group": "0_acontinue"
+          "submenu": "daemonium-core.mainSubMenu",
+          "group": "0_adaemonium-core"
         }
       ],
       "editor/title/run": [
         {
-          "command": "continue.rejectDiff",
-          "group": "Continue",
-          "when": "continue.streamingDiff"
+          "command": "daemonium-core.rejectDiff",
+          "group": "Daemonium-Core",
+          "when": "daemonium-core.streamingDiff"
         }
       ],
-      "continue.continueSubMenu": [
+      "daemonium-core.mainSubMenu": [
         {
-          "command": "continue.focusContinueInputWithoutClear",
-          "group": "Continue",
+          "command": "daemonium-core.focusDaemoniumCoreInputWithoutClear",
+          "group": "Daemonium-Core",
           "when": "editorHasSelection"
         },
         {
-          "command": "continue.writeCommentsForCode",
-          "group": "Continue",
+          "command": "daemonium-core.writeCommentsForCode",
+          "group": "Daemonium-Core",
           "when": "editorHasSelection"
         },
         {
-          "command": "continue.writeDocstringForCode",
-          "group": "Continue",
+          "command": "daemonium-core.writeDocstringForCode",
+          "group": "Daemonium-Core",
           "when": "editorHasSelection"
         },
         {
-          "command": "continue.fixCode",
-          "group": "Continue",
+          "command": "daemonium-core.fixCode",
+          "group": "Daemonium-Core",
           "when": "editorHasSelection"
         },
         {
-          "command": "continue.optimizeCode",
-          "group": "Continue",
+          "command": "daemonium-core.optimizeCode",
+          "group": "Daemonium-Core",
           "when": "editorHasSelection"
         },
         {
-          "command": "continue.fixGrammar",
-          "group": "Continue",
+          "command": "daemonium-core.fixGrammar",
+          "group": "Daemonium-Core",
           "when": "editorHasSelection && editorLangId == 'markdown'"
         }
       ],
       "explorer/context": [
         {
-          "command": "continue.selectFilesAsContext",
+          "command": "daemonium-core.selectFilesAsContext",
           "group": "1_debug@1"
         }
       ],
       "view/title": [
         {
-          "command": "continue.newSession",
+          "command": "daemonium-core.newSession",
           "group": "navigation@1",
-          "when": "view == continue.continueGUIView"
+          "when": "view == daemonium-core.mainGUIView"
         },
         {
-          "command": "continue.viewHistory",
+          "command": "daemonium-core.viewHistory",
           "group": "navigation@2",
-          "when": "view == continue.continueGUIView"
+          "when": "view == daemonium-core.mainGUIView"
         },
         {
-          "command": "continue.toggleFullScreen",
+          "command": "daemonium-core.toggleFullScreen",
           "group": "navigation@3",
-          "when": "view == continue.continueGUIView"
+          "when": "view == daemonium-core.mainGUIView"
         },
         {
-          "command": "continue.openConfig",
+          "command": "daemonium-core.openConfig",
           "group": "navigation@4",
-          "when": "view == continue.continueGUIView"
+          "when": "view == daemonium-core.mainGUIView"
         },
         {
-          "command": "continue.signInToControlPlane",
+          "command": "daemonium-core.signInToControlPlane",
           "group": "navigation@5",
-          "when": "(view == continue.continueGUIView) && config.continue.enableContinueForTeams && !continue.isSignedInToControlPlane"
+          "when": "(view == daemonium-core.mainGUIView) && config.daemonium-core.enableTeamsFeatures && !daemonium-core.isSignedInToControlPlane"
         },
         {
-          "command": "continue.openAccountDialog",
+          "command": "daemonium-core.openAccountDialog",
           "group": "navigation@5",
-          "when": "(view == continue.continueGUIView) && config.continue.enableContinueForTeams && continue.isSignedInToControlPlane"
+          "when": "(view == daemonium-core.mainGUIView) && config.daemonium-core.enableTeamsFeatures && daemonium-core.isSignedInToControlPlane"
         },
         {
-          "command": "continue.openMorePage",
+          "command": "daemonium-core.openMorePage",
           "group": "navigation@6",
-          "when": "view == continue.continueGUIView"
+          "when": "view == daemonium-core.mainGUIView"
         }
       ],
       "editor/title": [
         {
-          "command": "continue.newSession",
+          "command": "daemonium-core.newSession",
           "group": "navigation@1",
-          "when": "activeWebviewPanelId == continue.continueGUIView"
+          "when": "activeWebviewPanelId == daemonium-core.mainGUIView"
         },
         {
-          "command": "continue.viewHistory",
+          "command": "daemonium-core.viewHistory",
           "group": "navigation@2",
-          "when": "activeWebviewPanelId == continue.continueGUIView"
+          "when": "activeWebviewPanelId == daemonium-core.mainGUIView"
         }
       ],
       "terminal/context": [
         {
-          "command": "continue.debugTerminal",
+          "command": "daemonium-core.debugTerminal",
           "group": "navigation@top"
         }
       ]
@@ -570,17 +570,17 @@
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "continue",
-          "title": "Continue",
+          "id": "daemonium-core",
+          "title": "Daemonium-Core",
           "icon": "media/sidebar-icon.png"
         }
       ]
     },
     "views": {
-      "continue": [
+      "daemonium-core": [
         {
           "type": "webview",
-          "id": "continue.continueGUIView",
+          "id": "daemonium-core.mainGUIView",
           "name": "",
           "visibility": "visible"
         }
@@ -588,12 +588,12 @@
     },
     "jsonValidation": [
       {
-        "fileMatch": "**/.continue*/config.json",
+        "fileMatch": "**/.daemonium-core*/config.json",
         "url": "./config_schema.json"
       },
       {
-        "fileMatch": ".continuerc.json",
-        "url": "./continue_rc_schema.json"
+        "fileMatch": ".daemoniumrc.json",
+        "url": "./daemonium_rc_schema.json"
       }
     ]
   },
